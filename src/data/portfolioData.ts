@@ -5,7 +5,7 @@ export interface Project {
   tags: string[];
   github: string;
   live?: string;
-  category: 'Fullstack' | 'AI & DevOps' | 'APIs';
+  category: 'Mobile UX' | 'Web Systems' | 'Design Systems';
 }
 
 export interface SkillCategory {
@@ -22,8 +22,8 @@ export interface TimelineItem {
 
 export const BIOGRAPHY = {
   name: 'Nagesh Methre',
-  title: 'Senior Full-Stack Engineer & AI Architect',
-  bio: 'Passionate software engineer specializing in building highly scalable web systems, containerized CI/CD pipelines, and deep generative AI integrations. Expert in Next.js, Node.js, and multi-platform native wraps.',
+  title: 'Lead UI/UX Designer & Product Strategist',
+  bio: 'Specializing in crafting human-centered digital experiences. I design interactive wireframes, custom design systems, and responsive layouts that bridge user needs with business goals.',
   socials: {
     github: 'https://github.com/nageshmethre',
     linkedin: 'https://linkedin.com/in/nageshmethre',
@@ -33,82 +33,79 @@ export const BIOGRAPHY = {
 
 export const SKILLS: SkillCategory[] = [
   {
-    category: 'Frontend & Platforms',
+    category: 'UX Research & Design',
     skills: [
-      { name: 'Next.js / React', level: 95 },
-      { name: 'TypeScript', level: 90 },
-      { name: 'Tailwind CSS', level: 92 },
-      { name: 'Electron (Desktop)', level: 85 },
-      { name: 'Capacitor (Android)', level: 80 }
+      { name: 'Figma / Prototyping', level: 98 },
+      { name: 'Wireframing & Flowcharts', level: 95 },
+      { name: 'User Research & Persona Mapping', level: 90 },
+      { name: 'Information Architecture', level: 92 }
     ]
   },
   {
-    category: 'Backend & Databases',
+    category: 'UI & Interaction Development',
     skills: [
-      { name: 'Node.js / Express', level: 95 },
-      { name: 'PostgreSQL / Prisma', level: 90 },
-      { name: 'Redis Caching', level: 85 },
-      { name: 'Socket.io (WebSockets)', level: 90 },
-      { name: 'REST & GraphQL APIs', level: 92 }
+      { name: 'HTML5 Canvas Animations', level: 88 },
+      { name: 'Tailwind CSS / Glassmorphism', level: 94 },
+      { name: 'Next.js / React Layouts', level: 90 },
+      { name: 'Component-Driven Development', level: 92 }
     ]
   },
   {
-    category: 'AI & DevOps',
+    category: 'Product & Tools',
     skills: [
-      { name: 'OpenAI GPT & Whisper', level: 88 },
-      { name: 'Docker / Docker Compose', level: 90 },
-      { name: 'Nginx Load Balancer', level: 85 },
-      { name: 'GitHub Actions CI/CD', level: 87 },
-      { name: 'Vercel / AWS Deployments', level: 90 }
+      { name: 'Design Systems (Tokens & Assets)', level: 96 },
+      { name: 'Adobe Creative Suite', level: 85 },
+      { name: 'Git & Version Control', level: 88 },
+      { name: 'Vercel / Production Deployments', level: 90 }
     ]
   }
 ];
 
 export const PROJECTS: Project[] = [
   {
-    title: 'StreaminAi Media Engine',
-    description: 'A complete AI-powered YouTube clone featuring custom HLS player, Whisper transcription, and real-time Socket.io chats.',
-    longDescription: 'A production-ready media sharing site compiled into native desktop (Electron) and mobile (Capacitor) apps. Includes recursive comments validation, AI smart tag recommendations, and Stripe payment triggers.',
-    tags: ['Next.js', 'Express', 'Prisma', 'Socket.io', 'OpenAI'],
+    title: 'StreaminAi Video Design System',
+    description: 'A complete custom design system and layout system for an AI-powered YouTube clone, featuring dark mode glassmorphism interfaces.',
+    longDescription: 'Developed atomic components, grid tokens, and interactive canvas components for real-time video streaming panels. Included responsive grids and micro-interactions optimized for video players.',
+    tags: ['Figma UI', 'Design Tokens', 'Tailwind CSS', 'Atomic Components'],
     github: 'https://github.com/nageshmethre/StreaminAi',
-    live: 'https://frontend-steel-phi-91.vercel.app',
-    category: 'Fullstack'
+    live: 'https://nagesh-portfolio-lime.vercel.app',
+    category: 'Design Systems'
   },
   {
-    title: 'Automated PR Review Assistant',
-    description: 'An AI-Powered DevOps agent reviewing git push requests, auditing security flaws, and outputting line-level suggestions.',
-    longDescription: 'Monitors commits to scan for CVEs and hardcoded secrets. Outputs refactoring blocks containing markdown code comparisons directly to team developer dashboards.',
-    tags: ['Node.js', 'Git Hooks', 'paramiko', 'OpenAI API', 'Elasticsearch'],
-    github: 'https://github.com/nageshmethre/StreaminAi',
-    category: 'AI & DevOps'
+    title: 'FinTech Banking Wallet App',
+    description: 'High-fidelity wireframes and mobile UI layouts for a premium digital currency wallet, with custom chart dashboard assets.',
+    longDescription: 'Conducted user interviews, designed user journeys, mapped dashboard navigation structures, and built interactive mobile prototypes focusing on transaction transparency.',
+    tags: ['Mobile UX', 'User Research', 'Figma Prototyping', 'Usability Testing'],
+    github: 'https://github.com/nageshmethre/nageshshivajimethre.github.io',
+    category: 'Mobile UX'
   },
   {
-    title: 'Dynamic Web Scraping CLI',
-    description: 'High-concurrency scraping CLI crawling site architectures and generating searchable JSON datasets.',
-    longDescription: 'Bypasses standard client protections and handles cookies sessions routing. Stores scraped results dynamically into PostgreSQL indexing databases.',
-    tags: ['Node.js', 'Cheerio', 'PostgreSQL', 'Commander.js'],
-    github: 'https://github.com/nageshmethre/StreaminAi',
-    category: 'APIs'
+    title: 'Aura Smart Home Console',
+    description: 'A responsive smart-console tablet controller layout for smart-home security systems and home automation hubs.',
+    longDescription: 'Created customizable grid dashboards, mapped interactive security status nodes, and built animated device controllers using clean vector icons and smooth transition styles.',
+    tags: ['Web Systems', 'Tablet UI', 'Interactive Icons', 'Responsive Layout'],
+    github: 'https://github.com/nageshmethre/nageshshivajimethre.github.io',
+    category: 'Web Systems'
   }
 ];
 
 export const TIMELINE: TimelineItem[] = [
   {
-    year: '2025 - Present',
-    role: 'Senior Software Architect',
-    company: 'DevOps & AI Systems Corp',
-    description: 'Designed scalable server architectures, optimized PostgreSQL queries, and set up Dockerized pipelines.'
+    year: '2024 - Present',
+    role: 'Lead UI/UX Designer',
+    company: 'Innovate Tech Studios',
+    description: 'Spearheading product design guidelines, building unified client design tokens, and collaborating with developers to deploy Next.js static applications.'
   },
   {
-    year: '2023 - 2025',
-    role: 'Full-Stack Developer',
-    company: 'Cloud Scale Web Solutions',
-    description: 'Developed Next.js customer panels, integrated Stripe checkout portals, and synced WebSockets messaging gateways.'
+    year: '2022 - 2024',
+    role: 'UI Designer & Web Developer',
+    company: 'PixelPerfect Agency',
+    description: 'Designed interactive web layouts, created animation mockups, and converted static wireframes into responsive Tailwind CSS code structures.'
   },
   {
-    year: '2021 - 2023',
-    role: 'Backend Associate',
-    company: 'Tech Solutions Ltd',
-    description: 'Maintained legacy RESTful APIs, converted services to TypeScript, and set up daily audit logs backups.'
+    year: '2018 - 2022',
+    role: 'Bachelor of Design (B.Des) - Interaction Design',
+    company: 'Karnataka State University Quota',
+    description: 'Studied design methodologies, color theories, typography scales, accessibility guidelines, and interactive human-computer interfaces.'
   }
 ];

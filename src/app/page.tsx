@@ -6,6 +6,7 @@ import {
   Send, CheckCircle, Award, Terminal, Calendar, ChevronRight, User 
 } from 'lucide-react';
 import { BIOGRAPHY, SKILLS, PROJECTS, TIMELINE, Project } from '../data/portfolioData';
+import InteractiveCanvas from '../components/InteractiveCanvas';
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -35,11 +36,14 @@ export default function PortfolioPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#030712] text-[#f3f4f6] flex flex-col justify-between selection:bg-purple-500/30 selection:text-purple-300">
+    <div className="min-h-screen bg-[#030712] text-[#f3f4f6] flex flex-col justify-between selection:bg-purple-500/30 selection:text-purple-300 relative z-10">
+      
+      {/* 3D Orbiting Constellation Canvas */}
+      <InteractiveCanvas />
       
       {/* Glow Backdrops */}
-      <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl -z-10 animate-glow"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-600/10 rounded-full blur-3xl -z-10 animate-glow" style={{ animationDelay: '3s' }}></div>
+      <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl -z-20 animate-glow"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-600/10 rounded-full blur-3xl -z-20 animate-glow" style={{ animationDelay: '3s' }}></div>
 
       {/* Header / Nav Bar */}
       <header className="sticky top-0 z-50 w-full glass-panel border-b border-white/5 px-6 py-4 flex items-center justify-between">
@@ -124,8 +128,8 @@ export default function PortfolioPage() {
         <div className="flex justify-center">
           <div className="relative p-1 bg-gradient-to-tr from-purple-500 to-cyan-400 rounded-3xl overflow-hidden shadow-2xl">
             <div className="bg-[#0b0e14] p-6 rounded-[22px] flex flex-col items-center text-center space-y-4 w-72">
-              <div className="p-4 bg-purple-500/10 rounded-full text-purple-400">
-                <User className="h-12 w-12" />
+              <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-purple-500/30">
+                <img src="/profile.jpg" className="w-full h-full object-cover" alt="Nagesh Methre Profile" />
               </div>
               <div>
                 <h4 className="font-bold text-white text-lg">{BIOGRAPHY.name}</h4>
@@ -193,7 +197,7 @@ export default function PortfolioPage() {
 
           {/* Categories select tabs */}
           <div className="flex gap-2 overflow-x-auto pb-2">
-            {['All', 'Fullstack', 'AI & DevOps', 'APIs'].map((cat) => (
+            {['All', 'Mobile UX', 'Web Systems', 'Design Systems'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
