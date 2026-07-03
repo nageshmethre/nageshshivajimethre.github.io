@@ -64,10 +64,10 @@ export const SKILLS: SkillCategory[] = [
 export const PROJECTS: Project[] = [
   {
     title: 'NageshMethre CTF -v1',
-    description: 'Capture The Flag platform and security testing suite built under the guidance of Mohammed Tousif (CEO, Cynux Era).',
+    description: 'Capture The Flag platform and security testing suite built under the guidance of Mohammed Tousif (CEO, Cynux Era). Click to read the report.',
     longDescription: 'Completed in fulfillment of MCA SDP requirements. Focuses on penetration testing, vulnerability assessment, cyber forensics, and system network audits.',
-    tags: ['Cybersecurity', 'VAPT', 'Penetration Testing', 'Network Security'],
-    github: 'https://github.com/nageshmethre/nageshshivajimethre.github.io',
+    tags: ['Cybersecurity', 'VAPT', 'Project Report (PDF)', 'Network Security'],
+    github: '/nagesh_ctf_report.pdf',
     category: 'Security & AI'
   },
   {
