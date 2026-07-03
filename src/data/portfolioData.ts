@@ -5,7 +5,7 @@ export interface Project {
   tags: string[];
   github: string;
   live?: string;
-  category: 'Mobile UX' | 'Web Systems' | 'Design Systems';
+  category: 'Fullstack' | 'Security & AI' | 'Certifications';
 }
 
 export interface SkillCategory {
@@ -22,90 +22,96 @@ export interface TimelineItem {
 
 export const BIOGRAPHY = {
   name: 'Nagesh Methre',
-  title: 'Lead UI/UX Designer & Product Strategist',
-  bio: 'Specializing in crafting human-centered digital experiences. I design interactive wireframes, custom design systems, and responsive layouts that bridge user needs with business goals.',
+  title: 'Python Full-Stack Developer | Django Developer | MCA Student at REVA University',
+  bio: 'MCA student and Python-focused Full-Stack Developer with hands-on experience in Django, MySQL, HTML, CSS, JavaScript, and AI-assisted workflows. Passionate about backend development, security audits, and building scalable systems.',
   socials: {
     github: 'https://github.com/nageshmethre',
-    linkedin: 'https://linkedin.com/in/nageshmethre',
-    email: 'mailto:nageshmethre@example.com',
+    linkedin: 'https://www.linkedin.com/in/nageshmethre',
+    email: 'mailto:nageshmethre287@gmail.com',
   }
 };
 
 export const SKILLS: SkillCategory[] = [
   {
-    category: 'UX Research & Design',
+    category: 'Core Programming & Backend',
     skills: [
-      { name: 'Figma / Prototyping', level: 98 },
-      { name: 'Wireframing & Flowcharts', level: 95 },
-      { name: 'User Research & Persona Mapping', level: 90 },
-      { name: 'Information Architecture', level: 92 }
+      { name: 'Python / Django', level: 95 },
+      { name: 'C++', level: 85 },
+      { name: 'MySQL / DBMS', level: 90 },
+      { name: 'REST APIs & CRUD', level: 92 }
     ]
   },
   {
-    category: 'UI & Interaction Development',
+    category: 'Frontend & Networks',
     skills: [
-      { name: 'HTML5 Canvas Animations', level: 88 },
-      { name: 'Tailwind CSS / Glassmorphism', level: 94 },
-      { name: 'Next.js / React Layouts', level: 90 },
-      { name: 'Component-Driven Development', level: 92 }
+      { name: 'JavaScript', level: 88 },
+      { name: 'HTML5 & CSS3', level: 90 },
+      { name: 'Tailwind CSS / UI Layouts', level: 92 },
+      { name: 'Computer Networking', level: 85 }
     ]
   },
   {
-    category: 'Product & Tools',
+    category: 'Security & AI Tools',
     skills: [
-      { name: 'Design Systems (Tokens & Assets)', level: 96 },
-      { name: 'Adobe Creative Suite', level: 85 },
-      { name: 'Git & Version Control', level: 88 },
-      { name: 'Vercel / Production Deployments', level: 90 }
+      { name: 'Penetration Testing / VAPT', level: 80 },
+      { name: 'Cyber Forensics & Sec', level: 78 },
+      { name: 'AI Workflows (ChatGPT, Claude)', level: 90 },
+      { name: 'Git & GitHub Versioning', level: 87 }
     ]
   }
 ];
 
 export const PROJECTS: Project[] = [
   {
-    title: 'StreaminAi Video Design System',
-    description: 'A complete custom design system and layout system for an AI-powered YouTube clone, featuring dark mode glassmorphism interfaces.',
-    longDescription: 'Developed atomic components, grid tokens, and interactive canvas components for real-time video streaming panels. Included responsive grids and micro-interactions optimized for video players.',
-    tags: ['Figma UI', 'Design Tokens', 'Tailwind CSS', 'Atomic Components'],
+    title: 'NageshMethre CTF -v1',
+    description: 'Capture The Flag platform and security testing suite built under the guidance of Mohammed Tousif (CEO, Cynux Era).',
+    longDescription: 'Completed in fulfillment of MCA SDP requirements. Focuses on penetration testing, vulnerability assessment, cyber forensics, and system network audits.',
+    tags: ['Cybersecurity', 'VAPT', 'Penetration Testing', 'Network Security'],
+    github: 'https://github.com/nageshmethre/nageshshivajimethre.github.io',
+    category: 'Security & AI'
+  },
+  {
+    title: 'StreaminAi Django Engine',
+    description: 'Python & Django based media sharing API gateway mapping mock Stripe payments, HLS video streams, and JWT authentication.',
+    longDescription: 'Features automated transcoders transcoding files, user channel controllers, comments, real-time message relays, and subscriber systems.',
+    tags: ['Python', 'Django', 'MySQL', 'JWT Auth'],
     github: 'https://github.com/nageshmethre/StreaminAi',
     live: 'https://nagesh-portfolio-lime.vercel.app',
-    category: 'Design Systems'
+    category: 'Fullstack'
   },
   {
-    title: 'FinTech Banking Wallet App',
-    description: 'High-fidelity wireframes and mobile UI layouts for a premium digital currency wallet, with custom chart dashboard assets.',
-    longDescription: 'Conducted user interviews, designed user journeys, mapped dashboard navigation structures, and built interactive mobile prototypes focusing on transaction transparency.',
-    tags: ['Mobile UX', 'User Research', 'Figma Prototyping', 'Usability Testing'],
+    title: 'Professional Credentials Portfolio',
+    description: 'Interactive dashboard highlighting credentials including Gemini Certified Educator, Deloitte Data Analyst, and Tata Cybersecurity.',
+    longDescription: 'Organized portfolio sections displaying certifications badges, timelines, course achievements, and secure feedback forms.',
+    tags: ['Next.js', 'Tailwind CSS', 'Glassmorphism', 'Responsive Design'],
     github: 'https://github.com/nageshmethre/nageshshivajimethre.github.io',
-    category: 'Mobile UX'
-  },
-  {
-    title: 'Aura Smart Home Console',
-    description: 'A responsive smart-console tablet controller layout for smart-home security systems and home automation hubs.',
-    longDescription: 'Created customizable grid dashboards, mapped interactive security status nodes, and built animated device controllers using clean vector icons and smooth transition styles.',
-    tags: ['Web Systems', 'Tablet UI', 'Interactive Icons', 'Responsive Layout'],
-    github: 'https://github.com/nageshmethre/nageshshivajimethre.github.io',
-    category: 'Web Systems'
+    category: 'Certifications'
   }
 ];
 
 export const TIMELINE: TimelineItem[] = [
   {
-    year: '2024 - Present',
-    role: 'Lead UI/UX Designer',
-    company: 'Innovate Tech Studios',
-    description: 'Spearheading product design guidelines, building unified client design tokens, and collaborating with developers to deploy Next.js static applications.'
+    year: '2025 - 2027',
+    role: 'Master of Computer Applications (MCA)',
+    company: 'REVA University (School of Computer Science Application)',
+    description: 'Focusing on advanced computer programming, database management, network security, AI workflows, and software development projects.'
   },
   {
-    year: '2022 - 2024',
-    role: 'UI Designer & Web Developer',
-    company: 'PixelPerfect Agency',
-    description: 'Designed interactive web layouts, created animation mockups, and converted static wireframes into responsive Tailwind CSS code structures.'
+    year: '2022 - 2025',
+    role: 'Bachelor of Science (B.Sc) - Computer Science',
+    company: 'Gulbarga University, Kalaburgi',
+    description: 'Studied core computer science concepts, object-oriented programming (C++), algorithms, and databases.'
   },
   {
-    year: '2018 - 2022',
-    role: 'Bachelor of Design (B.Des) - Interaction Design',
-    company: 'Karnataka State University Quota',
-    description: 'Studied design methodologies, color theories, typography scales, accessibility guidelines, and interactive human-computer interfaces.'
+    year: 'May 2019 - July 2021',
+    role: 'Pre University 12th (PCMB)',
+    company: 'Diamond PU Science College',
+    description: 'Completed foundational pre-university education in Physics, Chemistry, Mathematics, and Biology.'
+  },
+  {
+    year: 'June 2009 - April 2019',
+    role: 'Secondary School Leaving Certificate (SSLC)',
+    company: 'Seventh Day Adventist Higher Secondary School',
+    description: 'Completed primary and secondary school education.'
   }
 ];
