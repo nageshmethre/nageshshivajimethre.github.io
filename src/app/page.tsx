@@ -129,7 +129,7 @@ export default function PortfolioPage() {
           <div className="relative p-1 bg-gradient-to-tr from-purple-500 to-cyan-400 rounded-3xl overflow-hidden shadow-2xl">
             <div className="bg-[#0b0e14] p-6 rounded-[22px] flex flex-col items-center text-center space-y-4 w-72">
               <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-purple-500/30">
-                <img src="/profile.jpg?v=3" className="w-full h-full object-cover" alt="Nagesh Methre Profile" />
+                <img src="/profile.png?v=4" className="w-full h-full object-cover" alt="Nagesh Methre Profile" />
               </div>
               <div>
                 <h4 className="font-bold text-white text-lg">{BIOGRAPHY.name}</h4>
