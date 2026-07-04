@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Mail, ExternalLink, Code, Layers, Server, 
-  Send, CheckCircle, Award, Terminal, Calendar, ChevronRight, User 
+  Send, CheckCircle, Award, Terminal, Calendar, ChevronRight, User, Eye
 } from 'lucide-react';
 import { BIOGRAPHY, SKILLS, PROJECTS, TIMELINE, Project } from '../data/portfolioData';
 import InteractiveCanvas from '../components/InteractiveCanvas';
@@ -11,12 +11,49 @@ import InteractiveCanvas from '../components/InteractiveCanvas';
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [activeProjectModal, setActiveProjectModal] = useState<Project | null>(null);
+  const [visitorsCount, setVisitorsCount] = useState<number | null>(null);
   
   // Contact Form State
   const [contactName, setContactName] = useState('');
   const [contactEmail, setContactEmail] = useState('');
   const [contactMsg, setContactMsg] = useState('');
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    const KEY = 'nageshmethre_portfolio_visits';
+    const BASE_URL = 'https://countapi.mileshilliard.com/api/v1';
+    
+    const isSessionVisited = sessionStorage.getItem('nagesh_portfolio_visited');
+    const endpoint = isSessionVisited ? `${BASE_URL}/get/${KEY}` : `${BASE_URL}/hit/${KEY}`;
+
+    const fetchCounter = (url: string, fallbackToHit = false) => {
+      fetch(url)
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
+          return res.json();
+        })
+        .then(data => {
+          if (data && typeof data.value === 'number') {
+            setVisitorsCount(data.value);
+            if (!isSessionVisited) {
+              sessionStorage.setItem('nagesh_portfolio_visited', 'true');
+            }
+          } else if (fallbackToHit) {
+            fetchCounter(`${BASE_URL}/hit/${KEY}`, false);
+          }
+        })
+        .catch(err => {
+          console.error('Error fetching visitor counter:', err);
+          if (fallbackToHit) {
+            fetchCounter(`${BASE_URL}/hit/${KEY}`, false);
+          }
+        });
+    };
+
+    fetchCounter(endpoint, !!isSessionVisited);
+  }, []);
 
   const filteredProjects = selectedCategory === 'All'
     ? PROJECTS
@@ -143,6 +180,13 @@ export default function PortfolioPage() {
                 <div className="flex justify-between text-xs text-gray-400">
                   <span>Platforms:</span>
                   <span className="text-white font-semibold">Web, Desktop, Mobile</span>
+                </div>
+                <div className="flex justify-between text-xs text-gray-400">
+                  <span>Visits:</span>
+                  <span className="text-white font-semibold flex items-center gap-1">
+                    <Eye className="h-3.5 w-3.5 text-purple-400" />
+                    {visitorsCount !== null ? visitorsCount.toLocaleString() : '...'}
+                  </span>
                 </div>
               </div>
             </div>
@@ -349,6 +393,12 @@ export default function PortfolioPage() {
       <footer className="border-t border-white/5 py-8 text-center text-xs text-gray-500 px-6">
         <p>© {new Date().getFullYear()} Nagesh Methre. All rights reserved.</p>
         <p className="mt-1">Built with Next.js & Tailwind CSS. Hosted on Vercel.</p>
+        {visitorsCount !== null && (
+          <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/5 rounded-full text-[11px] text-gray-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+            <span>Total Visitors: <strong className="text-white">{visitorsCount.toLocaleString()}</strong></span>
+          </div>
+        )}
       </footer>
 
 

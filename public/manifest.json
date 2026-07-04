@@ -1,0 +1,21 @@
+{
+  "name": "Nagesh Methre Portfolio",
+  "short_name": "Nagesh Portfolio",
+  "description": "Python Full-Stack Developer, Django Developer, and MCA Student Portfolio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/profile.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
