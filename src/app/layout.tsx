@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   verification: {
-    google: "google-site-verification-placeholder-code",
+    google: "google77562c08480b73cf",
   },
   openGraph: {
     type: "website",
