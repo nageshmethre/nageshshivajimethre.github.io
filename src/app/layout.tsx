@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Nagesh Methre" }],
   creator: "Nagesh Methre",
-  metadataBase: new URL("https://nageshmethre.dev"),
+  metadataBase: new URL("https://nageshshivajimethre.me"),
   alternates: {
-    canonical: "https://nageshmethre.dev",
+    canonical: "https://nageshshivajimethre.me",
   },
   icons: {
     icon: "/favicon.ico",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nageshmethre.dev",
+    url: "https://nageshshivajimethre.me",
     title: "Nagesh Methre | Python Full-Stack & Django Developer",
     description: "Professional developer portfolio of Nagesh Methre, MCA student at REVA University specializing in Python, Django, MySQL, and cybersecurity.",
     siteName: "Nagesh Methre Portfolio",
@@ -84,7 +84,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Nagesh Methre",
-              "url": "https://nageshmethre.dev",
+              "url": "https://nageshshivajimethre.me",
               "jobTitle": "Python Full-Stack Developer & Django Developer",
               "worksFor": {
                 "@type": "Organization",
