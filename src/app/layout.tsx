@@ -12,6 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  themeColor: "#030712",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "Nagesh Methre | Python Full-Stack & Django Developer",
   description: "Professional developer portfolio of Nagesh Methre, MCA student at REVA University specializing in Python, Django, MySQL, and cybersecurity.",
@@ -40,6 +46,17 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   verification: {
     google: "google77562c08480b73cf",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     type: "website",

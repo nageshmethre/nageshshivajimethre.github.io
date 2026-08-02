@@ -109,6 +109,8 @@ export default function PortfolioPage() {
         </a>
       </header>
 
+      <main className="flex-grow">
+
       {/* Hero Section */}
       <section id="about" className="max-w-5xl mx-auto px-6 py-20 md:py-32 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
         <div className="md:col-span-2 space-y-6">
@@ -133,6 +135,7 @@ export default function PortfolioPage() {
               <a 
                 href={BIOGRAPHY.socials.github} 
                 target="_blank" 
+                rel="noopener noreferrer me"
                 className="p-3 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 text-gray-300 hover:text-white transition-colors"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -143,6 +146,7 @@ export default function PortfolioPage() {
               <a 
                 href={BIOGRAPHY.socials.linkedin} 
                 target="_blank" 
+                rel="noopener noreferrer me"
                 className="p-3 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 text-gray-300 hover:text-white transition-colors"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -166,7 +170,12 @@ export default function PortfolioPage() {
           <div className="relative p-1 bg-gradient-to-tr from-purple-500 to-cyan-400 rounded-3xl overflow-hidden shadow-2xl">
             <div className="bg-[#0b0e14] p-6 rounded-[22px] flex flex-col items-center text-center space-y-4 w-72">
               <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-purple-500/30">
-                <img src="/profile.png?v=5" className="w-full h-full object-cover" alt="Nagesh Methre Profile" />
+                <img 
+                  src="/profile.png?v=5" 
+                  className="w-full h-full object-cover" 
+                  alt="Nagesh Methre - Python Full-Stack & Django Developer Portfolio Profile" 
+                  fetchPriority="high"
+                />
               </div>
               <div>
                 <h4 className="font-bold text-white text-lg">{BIOGRAPHY.name}</h4>
@@ -388,6 +397,8 @@ export default function PortfolioPage() {
           </form>
         )}
       </section>
+
+      </main>
 
       {/* Footer */}
       <footer className="border-t border-white/5 py-8 text-center text-xs text-gray-500 px-6">
